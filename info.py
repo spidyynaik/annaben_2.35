@@ -43,7 +43,7 @@ RENAME_MODE = bool(environ.get("RENAME_MODE"))
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-UPDATES_CHANNEL = int(environ. get('UPDATES_CHANNEL', '-1001646572603'))
+UPDATES_CHANNEL = int(environ. get('UPDATES_CHANNEL', '-1001508034714'))
 
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -57,7 +57,7 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))
-BIN_CHANNEL = int(environ. get('BIN_CHANNEL', '-1001965839568'))
+BIN_CHANNEL = int(environ. get('BIN_CHANNEL', '-1001657638670'))
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
